@@ -48,3 +48,15 @@ print("The result of flow division is:", c)
 
 # in flow divion if the divde the one number by another number and if it less than 5 or 5 it we get the resut as a quotient
 # but the if we divide the one number by another number and if it greater than 5 we get the result as remainder
+
+
+# when we have to find out the modulus of one number which is negative and one is positibe 
+# so accoring to the python rule we get the result as negativenad
+'''whenver moudluls mai jab bhi negativ ho toh vo big number leta hai 
+if negative is both side on the number and we have to find out the modulus
+so that the result is always positive'''
+# Example of modulus with negative numbers
+a = -10
+b = 3
+c = a % b
+print("The modulus of -10 and 3 is:", c)  # Output will be 2, as Python takes the larger number in modulus
