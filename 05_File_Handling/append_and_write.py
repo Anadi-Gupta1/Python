@@ -10,7 +10,19 @@ Purpose: Educational demonstration of file operations
 """
 
 import os
+import logging
 from datetime import datetime
+from pathlib import Path
+
+# Configure logging for better error tracking
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('file_operations.log'),
+        logging.StreamHandler()
+    ]
+)
 
 
 class FileOperations:
