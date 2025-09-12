@@ -1,0 +1,5 @@
+Exclusive File Creation Demonstration
+====================================
+Created using 'x' mode at: 2025-09-12 09:26:13.305200
+This mode fails if file already exists.
+Useful for preventing accidental overwrites.
