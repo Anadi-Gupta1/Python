@@ -1,6 +1,6 @@
 # 📁 05_File_Handling
 
-This directory contains Python programs demonstrating various file handling operations and techniques.
+This directory contains Python programs demonstrating various file handling operations and techniques with professional-grade implementations.
 
 ## 📄 Files Overview
 
@@ -8,13 +8,17 @@ This directory contains Python programs demonstrating various file handling oper
 |------|-------------|----------|
 | [`file_reading_examples.py`](file_reading_examples.py) | Basic file reading with error handling | Multiple reading methods, path resolution, exception handling |
 | [`comprehensive_file_operations.py`](comprehensive_file_operations.py) | Complete file operations demonstration | Read, write, append, create, file properties |
+| [`append_and_write.py`](append_and_write.py) | Professional file writing and appending | Advanced error handling, logging, best practices |
+| [`python_file_opener.py`](python_file_opener.py) | Professional file opening operations | Multiple opening methods, security features |
 | [`demofile.txt`](demofile.txt) | Sample text file for testing | Test data for file operations |
+| [`SECURITY.md`](SECURITY.md) | Security guidelines for file operations | Best practices, security considerations |
 
 ## 🔧 Generated Files
 
 These files are created automatically when running the programs:
 - `output.txt` - Created by write operations
 - `newfile.txt` - Created using 'x' mode
+- `file_operations.log` - Logging output from operations
 
 ## 🚀 How to Run
 
