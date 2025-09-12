@@ -137,6 +137,31 @@ Python/
 
 ---
 
+## 📊 06_Numpy
+
+**Master scientific computing with NumPy:**
+
+| Program | Functionality | Features | Key Concepts |
+|---------|---------------|----------|--------------|
+| [`numpy_intro.py`](06_Numpy/numpy_intro.py) | NumPy fundamentals introduction | Performance comparison, basic concepts, version info | Array advantages, scientific computing |
+| [`array_creation_operations.py`](06_Numpy/array_creation_operations.py) | Complete array creation guide | Multi-dimensional arrays, creation functions, data types | zeros, ones, arange, linspace, reshaping |
+| [`array_indexing_slicing.py`](06_Numpy/array_indexing_slicing.py) | Master indexing and slicing | Boolean indexing, fancy indexing, performance tips | Views vs copies, conditional selection |
+| [`numpy_getting_started_guide.py`](06_Numpy/numpy_getting_started_guide.py) | Comprehensive beginner guide | Installation, troubleshooting, best practices | Environment setup, help resources |
+
+### 📄 Supporting Files
+- `README.md` - Complete NumPy module documentation with examples and tutorials
+
+### 🎯 NumPy Concepts Covered
+- **Array Fundamentals**: N-dimensional arrays, shape, size, dtype
+- **Performance**: 50x faster than Python lists, vectorization
+- **Creation Methods**: Various array creation functions and techniques
+- **Indexing**: Basic, boolean, and fancy indexing methods
+- **Slicing**: Multi-dimensional slicing and memory views
+- **Broadcasting**: Operations between arrays of different shapes
+- **Data Types**: Efficient memory usage with appropriate dtypes
+
+---
+
 ## 🚀 Quick Start Guide
 
 ### Prerequisites
@@ -158,6 +183,7 @@ Python/
    cd 03_Data_Structures     # For data manipulation
    cd 04_Logic_Problems      # For algorithmic challenges
    cd 05_File_Handling       # For file operations
+   cd 06_Numpy               # For scientific computing
    ```
 
 3. **Run any program:**
@@ -178,6 +204,10 @@ python prime_number_checker.py
 # Demonstrate file operations
 cd 05_File_Handling
 python comprehensive_file_operations.py
+
+# Learn NumPy fundamentals
+cd 06_Numpy
+python numpy_intro.py
 ```
 
 ---
