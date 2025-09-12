@@ -116,6 +116,8 @@ Python/
 | [`append_and_write.py`](05_File_Handling/append_and_write.py) | Professional file writing operations | Writing, appending, overwriting, safe operations | File modes, error handling, best practices |
 | [`python_file_opener.py`](05_File_Handling/python_file_opener.py) | Professional file opening techniques | Various opening methods, path management, safety | Modern file handling, pathlib usage |
 | [`advanced_file_operations.py`](05_File_Handling/advanced_file_operations.py) | Advanced file processing operations | Batch operations, concurrent processing, hashing | Performance optimization, threading |
+| [`simple_file_writer.py`](05_File_Handling/simple_file_writer.py) | Basic file writing demonstration | Simple file creation with best practices | Context managers, error handling |
+| [`safe_file_operations.py`](05_File_Handling/safe_file_operations.py) | Safe file and folder deletion | Secure deletion with validation checks | Resource management, safety protocols |
 
 ### 📄 Supporting Files
 - `demofile.txt` - Sample text file for testing operations

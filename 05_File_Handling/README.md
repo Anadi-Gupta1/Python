@@ -10,6 +10,9 @@ This directory contains Python programs demonstrating various file handling oper
 | [`comprehensive_file_operations.py`](comprehensive_file_operations.py) | Complete file operations demonstration | Read, write, append, create, file properties |
 | [`append_and_write.py`](append_and_write.py) | Professional file writing and appending | Advanced error handling, logging, best practices |
 | [`python_file_opener.py`](python_file_opener.py) | Professional file opening operations | Multiple opening methods, security features |
+| [`advanced_file_operations.py`](advanced_file_operations.py) | Advanced file processing | Batch operations, concurrent processing, hashing |
+| [`simple_file_writer.py`](simple_file_writer.py) | Basic file writing demonstration | Simple file creation, context managers |
+| [`safe_file_operations.py`](safe_file_operations.py) | Safe file and folder deletion | Secure deletion with validation, error handling |
 | [`demofile.txt`](demofile.txt) | Sample text file for testing | Test data for file operations |
 | [`SECURITY.md`](SECURITY.md) | Security guidelines for file operations | Best practices, security considerations |
 
