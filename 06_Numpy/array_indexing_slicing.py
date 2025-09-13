@@ -181,7 +181,7 @@ def demonstrate_advanced_slicing():
     print(f"\n🎯 3D Slicing Examples:")
     print(f"   First matrix [0, :, :]:")
     print(arr_3d[0, :, :])
-    
+    22
     print(f"   Middle column of all matrices [:, 1, :]:")
     print(arr_3d[:, 1, :])
     
