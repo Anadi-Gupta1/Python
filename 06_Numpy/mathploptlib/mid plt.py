@@ -179,13 +179,27 @@ linewidth/lw - Line width
 alpha - Transparency (0-1)
 """)
 
-print("All examples completed successfully!")
+# 7. Line width examples
+print("\n7. Line width examples:")
+plt.figure(figsize=(12, 4))
 
-import matplotlib.pyplot as plt
-import numpy as np
+# Sample data for line width demonstration
+xpoints = np.array([10.20, 30.40, 50.60])
+ypoints = np.array([20.30, 40.50, 60.70])
 
-xpoints = np.array([10.20,30.40,50.60])
-ypoints = np.array([20.30,40.50,60.70])
+plt.subplot(1, 3, 1)
+plt.plot(xpoints, ypoints, linewidth=1)
+plt.title("Thin Line (linewidth=1)")
 
-plt.plot(xpoints, ypoints, linewidth = 20.5)
+plt.subplot(1, 3, 2)
+plt.plot(xpoints, ypoints, linewidth=5)
+plt.title("Medium Line (linewidth=5)")
+
+plt.subplot(1, 3, 3)
+plt.plot(xpoints, ypoints, linewidth=20.5)
+plt.title("Thick Line (linewidth=20.5)")
+
+plt.tight_layout()
 plt.show()
+
+print("All examples completed successfully!")
