@@ -166,7 +166,9 @@ Python/
 | [`plot_markers_guide.py`](07_Matplotlib/plot_markers_guide.py) | Comprehensive marker styles guide | All marker types, colors, sizes, customization | Visual styling, plot aesthetics |
 | [`advanced_plotting_styles.py`](07_Matplotlib/advanced_plotting_styles.py) | Advanced styling and customization | Complex plots, styling options, professional appearance | Plot styling, visual design |
 | [`labels_and_titles.py`](07_Matplotlib/labels_and_titles.py) | Labels, titles, and annotations | Comprehensive labeling, annotations, text styling | Plot documentation, clarity |
-| [`matplotlib_subplot.py`](07_Matplotlib/matplotlib_subplot.py) | Multiple plots and subplots | Grid layouts, figure management, subplot customization | Layout design, multi-plot visualization |
+| [`subplot_layout_examples.py`](07_Matplotlib/subplot_layout_examples.py) | Multiple plots and subplots | Grid layouts, figure management, subplot customization | Layout design, multi-plot visualization |
+| [`scatter_plot_examples.py`](07_Matplotlib/scatter_plot_examples.py) | Comprehensive scatter plot guide | Color mapping, size variations, correlation visualization | Data relationships, scatter analysis |
+| [`pie_chart_examples.py`](07_Matplotlib/pie_chart_examples.py) | Professional pie chart creation | Custom styling, labels, exploded effects | Data distribution, categorical visualization |
 | [`grid_customization.py`](07_Matplotlib/grid_customization.py) | Grid styling and customization | Grid appearance, styling options, professional layouts | Visual enhancement, readability |
 
 ### 📈 Matplotlib Features Covered

@@ -38,6 +38,34 @@ This module provides comprehensive examples and tutorials for Matplotlib, the mo
 - **Features**:
   - Axis labels and plot titles
   - Font customization (family, size, weight, style)
+  - Text positioning and alignment
+  - Professional presentation techniques
+
+### 5. Subplot Layout Examples (`subplot_layout_examples.py`)
+- **Purpose**: Creating multiple plots in organized layouts
+- **Features**:
+  - Grid-based subplot arrangements
+  - Figure size and spacing management
+  - Individual subplot customization
+  - Professional multi-plot presentations
+
+### 6. Scatter Plot Examples (`scatter_plot_examples.py`)
+- **Purpose**: Comprehensive scatter plot demonstrations
+- **Features**:
+  - Basic and advanced scatter plots
+  - Color mapping and size variations
+  - Data correlation visualization
+  - Professional scatter plot styling
+
+### 7. Pie Chart Examples (`pie_chart_examples.py`)
+- **Purpose**: Professional pie chart creation and customization
+- **Features**:
+  - Basic pie chart creation
+  - Custom colors and styling
+  - Labels and percentage display
+  - Exploded pie chart effects
+
+### 8. Grid Customization (`grid_customization.py`)
   - Title positioning (left, center, right)
   - Advanced text formatting
   - Multiple font families demonstration
