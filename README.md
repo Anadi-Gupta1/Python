@@ -21,6 +21,8 @@ Python/
 ├── 03_Data_Structures/        # Lists, functions, and data manipulation
 ├── 04_Logic_Problems/         # Algorithmic thinking & problem solving
 ├── 05_File_Handling/          # File operations & I/O management
+├── 06_Numpy/                 # NumPy arrays & mathematical operations
+├── 07_Matplotlib/            # Data visualization & plotting
 └── README.md                  # Project documentation
 ```
 
@@ -132,11 +134,59 @@ Python/
 
 ---
 
-## 🚀 Quick Start Guide
+## � 06_Numpy
+
+**Master NumPy for numerical computing and data manipulation:**
+
+| Program | Functionality | Features | Key Concepts |
+|---------|---------------|----------|--------------|
+| [`numpy_hello_world.py`](06_Numpy/numpy_hello_world.py) | Introduction to NumPy basics | Array creation, basic operations, printing | NumPy fundamentals, array basics |
+| [`numpy_intro.py`](06_Numpy/numpy_intro.py) | Comprehensive NumPy introduction | Array creation, indexing, slicing, operations | Array manipulation, mathematical operations |
+| [`array_creation_operations.py`](06_Numpy/array_creation_operations.py) | Array creation methods and operations | Multiple creation techniques, reshaping, copying | Array initialization, memory management |
+| [`array_indexing_slicing.py`](06_Numpy/array_indexing_slicing.py) | Advanced indexing and slicing techniques | Multi-dimensional access, boolean indexing, fancy indexing | Array access patterns, data selection |
+| [`numpy_getting_started_guide.py`](06_Numpy/numpy_getting_started_guide.py) | Complete getting started tutorial | Installation, basic usage, common patterns | NumPy workflow, best practices |
+
+### 📊 NumPy Features Covered
+- **Array Creation**: `np.array()`, `np.zeros()`, `np.ones()`, `np.arange()`, `np.linspace()`
+- **Array Operations**: Mathematical operations, broadcasting, element-wise operations
+- **Indexing & Slicing**: Multi-dimensional access, boolean indexing, fancy indexing
+- **Array Manipulation**: Reshaping, concatenation, splitting, copying
+- **Mathematical Functions**: Trigonometry, statistics, linear algebra basics
+- **Performance**: Vectorized operations, memory efficiency
+
+---
+
+## 📊 07_Matplotlib
+
+**Master data visualization with Matplotlib:**
+
+| Program | Functionality | Features | Key Concepts |
+|---------|---------------|----------|--------------|
+| [`basic_plotting_examples.py`](07_Matplotlib/basic_plotting_examples.py) | Fundamental plotting techniques | Line plots, scatter plots, basic customization | Plot creation, data visualization basics |
+| [`plot_markers_guide.py`](07_Matplotlib/plot_markers_guide.py) | Comprehensive marker styles guide | All marker types, colors, sizes, customization | Visual styling, plot aesthetics |
+| [`advanced_plotting_styles.py`](07_Matplotlib/advanced_plotting_styles.py) | Advanced styling and customization | Complex plots, styling options, professional appearance | Plot styling, visual design |
+| [`labels_and_titles.py`](07_Matplotlib/labels_and_titles.py) | Labels, titles, and annotations | Comprehensive labeling, annotations, text styling | Plot documentation, clarity |
+| [`matplotlib_subplot.py`](07_Matplotlib/matplotlib_subplot.py) | Multiple plots and subplots | Grid layouts, figure management, subplot customization | Layout design, multi-plot visualization |
+| [`grid_customization.py`](07_Matplotlib/grid_customization.py) | Grid styling and customization | Grid appearance, styling options, professional layouts | Visual enhancement, readability |
+
+### 📈 Matplotlib Features Covered
+- **Basic Plots**: Line plots, scatter plots, bar charts, histograms
+- **Customization**: Colors, markers, line styles, fonts, sizes
+- **Layouts**: Subplots, figure management, grid arrangements
+- **Annotations**: Labels, titles, legends, text annotations
+- **Styling**: Themes, professional appearance, publication-ready plots
+- **Export**: Saving plots in various formats (PNG, PDF, SVG)
+- **Interactive Features**: Basic interactivity, plot updates
+
+---
+
+## �🚀 Quick Start Guide
 
 ### Prerequisites
 - Python 3.6+ installed
 - Text editor or IDE (VS Code recommended)
+- NumPy library (for numerical computing modules): `pip install numpy`
+- Matplotlib library (for data visualization modules): `pip install matplotlib`
 
 ### Installation & Usage
 
@@ -153,6 +203,8 @@ Python/
    cd 03_Data_Structures     # For data manipulation
    cd 04_Logic_Problems      # For algorithmic challenges
    cd 05_File_Handling       # For file operations
+   cd 06_Numpy              # For numerical computing
+   cd 07_Matplotlib         # For data visualization
    ```
 
 3. **Run any program:**
@@ -173,6 +225,14 @@ python prime_number_checker.py
 # Demonstrate file operations
 cd 05_File_Handling
 python comprehensive_file_operations.py
+
+# Explore NumPy arrays
+cd 06_Numpy
+python numpy_intro.py
+
+# Create data visualizations
+cd 07_Matplotlib
+python basic_plotting_examples.py
 ```
 
 ---
@@ -196,6 +256,8 @@ graph TD
     B --> C[03_Data_Structures]
     C --> D[04_Logic_Problems]
     D --> E[05_File_Handling]
+    E --> F[06_Numpy]
+    F --> G[07_Matplotlib]
     
     A --> A1[Variables & Types]
     A --> A2[Operators]
@@ -216,6 +278,14 @@ graph TD
     E --> E1[File I/O]
     E --> E2[Path Management]
     E --> E3[Error Handling]
+    
+    F --> F1[Array Operations]
+    F --> F2[Mathematical Computing]
+    F --> F3[Data Manipulation]
+    
+    G --> G1[Basic Plotting]
+    G --> G2[Advanced Visualization]
+    G --> G3[Professional Charts]
 ```
 
 ---
@@ -229,6 +299,8 @@ graph TD
 | **Data Structures** | List operations, functions, data manipulation |
 | **Logic Problems** | Algorithm design, optimization, problem decomposition |
 | **File Handling** | File I/O, path management, error handling, resource management |
+| **NumPy** | Array operations, mathematical computing, data manipulation, performance optimization |
+| **Matplotlib** | Data visualization, plotting, chart creation, professional graphics |
 
 ---
 

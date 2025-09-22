@@ -13,3 +13,5 @@ This module contains NumPy learning examples and matplotlib plotting examples.
 - `mathploptlib/makers.py` - Marker examples and reference guide
 - `mathploptlib/mid plt.py` - Advanced markers, lines, colors, and line width examples
 - `mathploptlib/title.py` - Labels, titles, and font formatting examples
+- `mathploptlib/matplotlib_subplot.py` - Subplot layouts and multiple plot configurations
+- `mathploptlib/grid.py` - Grid examples and formatting
