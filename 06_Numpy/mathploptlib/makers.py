@@ -38,3 +38,14 @@ Marker	Description
 '4'	Tri Right	
 '|'	Vline	
 '_'	Hline
+
+
+
+'r'	Red	
+'g'	Green	
+'b'	Blue	
+'c'	Cyan	
+'m'	Magenta	
+'y'	Yellow	
+'k'	Black	
+'w'	White
