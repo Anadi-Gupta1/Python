@@ -1,3 +1,9 @@
+df.dropna(inplace = True)
+
+
+
+
+
 Pandas - Cleaning Empty Cells
 Empty Cells
 Empty cells can potentially give you a wrong result when you analyze data.
