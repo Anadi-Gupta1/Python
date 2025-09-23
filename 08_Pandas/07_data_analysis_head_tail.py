@@ -22,76 +22,119 @@ import pandas as pd
 print("=== Data Analysis with head() and tail() ===")
 
 # Create sample data for demonstration
+sample_data = {
+    'Duration': [60, 60, 60, 45, 45, 60, 60, 45, 45, 60, 60, 60, 60],
+    'Pulse': [110, 117, 103, 109, 117, 102, 110, 104, 109, 98, 103, 100, 106],
+    'Maxpulse': [130, 145, 135, 175, 148, 127, 136, 134, 133, 124, 147, 120, 128],
+    'Calories': [409, 479, 340, 282, 406, 300, 374, 253, 195, 269, 329, 250, 345]
+}
 
-df = pd.read_csv('data.csv')
+df = pd.DataFrame(sample_data)
 
-print(df.head(10))
-In our examples we will be using a CSV file called 'data.csv'.
+# =============================================================================
+# HEAD() METHOD - VIEW FIRST ROWS
+# =============================================================================
 
-Download data.csv, or open data.csv in your browser.
+print("\n=== Using head() method ===")
 
-Note: if the number of rows is not specified, the head() method will return the top 5 rows.
-
-Example
-Print the first 5 rows of the DataFrame:
-
-import pandas as pd
-
-df = pd.read_csv('data.csv')
-
+# Default head() - shows first 5 rows
+print("First 5 rows (default):")
 print(df.head())
-There is also a tail() method for viewing the last rows of the DataFrame.
 
-The tail() method returns the headers and a specified number of rows, starting from the bottom.
+# Specify number of rows
+print("\nFirst 3 rows:")
+print(df.head(3))
 
-Example
-Print the last 5 rows of the DataFrame:
+print("\nFirst 10 rows:")
+print(df.head(10))
 
-print(df.tail()) 
-REMOVE ADS
+# =============================================================================
+# TAIL() METHOD - VIEW LAST ROWS
+# =============================================================================
 
-Info About the Data
-The DataFrames object has a method called info(), that gives you more information about the data set.
+print("\n=== Using tail() method ===")
 
-Example
-Print information about the data:
+# Default tail() - shows last 5 rows
+print("Last 5 rows (default):")
+print(df.tail())
 
-print(df.info()) 
-Result
+# Specify number of rows
+print("\nLast 3 rows:")
+print(df.tail(3))
 
-  <class 'pandas.core.frame.DataFrame'>
-  RangeIndex: 169 entries, 0 to 168
-  Data columns (total 4 columns):
-   #   Column    Non-Null Count  Dtype  
-  ---  ------    --------------  -----  
-   0   Duration  169 non-null    int64  
-   1   Pulse     169 non-null    int64  
-   2   Maxpulse  169 non-null    int64  
-   3   Calories  164 non-null    float64
-  dtypes: float64(1), int64(3)
-  memory usage: 5.4 KB
-  None
-    
-Result Explained
-The result tells us there are 169 rows and 4 columns:
+# =============================================================================
+# INFO() METHOD - DATASET INFORMATION
+# =============================================================================
 
+print("\n=== Dataset Information with info() ===")
+print("Complete dataset information:")
+print(df.info())
 
-  RangeIndex: 169 entries, 0 to 168
-  Data columns (total 4 columns):
+print("\n=== Understanding info() output ===")
+info_explanation = """
+INFO() METHOD EXPLAINS:
+1. DataFrame class and memory usage
+2. RangeIndex: Number of entries (rows)
+3. Data columns: Column count and names
+4. Non-Null Count: Missing values per column
+5. Dtype: Data type of each column
+6. Memory usage: Space consumed by DataFrame
+"""
+print(info_explanation)
 
-And the name of each column, with the data type:
+# =============================================================================
+# PRACTICAL EXAMPLES
+# =============================================================================
 
+print("\n=== Practical Data Exploration ===")
 
-   #   Column    Non-Null Count  Dtype  
-  ---  ------    --------------  -----  
-   0   Duration  169 non-null    int64  
-   1   Pulse     169 non-null    int64  
-   2   Maxpulse  169 non-null    int64  
-   3   Calories  164 non-null    float64
+# Combine multiple methods for comprehensive overview
+print("Dataset shape:", df.shape)
+print("\nColumn names:", list(df.columns))
+print("\nData types:")
+print(df.dtypes)
 
-Null Values
-The info() method also tells us how many Non-Null values there are present in each column, and in our data set it seems like there are 164 of 169 Non-Null values in the "Calories" column.
+print("\nFirst and last rows comparison:")
+print("FIRST 2 ROWS:")
+print(df.head(2))
+print("\nLAST 2 ROWS:")
+print(df.tail(2))
 
-Which means that there are 5 rows with no value at all, in the "Calories" column, for whatever reason.
+# Check for missing values
+print("\nMissing values per column:")
+print(df.isnull().sum())
 
-Empty values, or Null values, can be bad when analyzing data, and you should consider removing rows with empty values. This is a step towards what is called cleaning data, and you will learn more about that in the next chapters.
+# Basic statistics
+print("\nBasic statistics:")
+print(df.describe())
+
+# =============================================================================
+# BEST PRACTICES
+# =============================================================================
+
+print("\n=== Best Practices ===")
+best_practices = """
+DATA EXPLORATION WORKFLOW:
+1. df.head() - Quick look at first few rows
+2. df.tail() - Check last few rows
+3. df.info() - Get dataset overview
+4. df.describe() - Statistical summary
+5. df.shape - Dimensions (rows, columns)
+6. df.columns - Column names
+7. df.isnull().sum() - Check missing values
+"""
+print(best_practices)
+
+# =============================================================================
+# KEY POINTS TO REMEMBER:
+# =============================================================================
+"""
+IMPORTANT CONCEPTS:
+1. head() shows first n rows (default: 5)
+2. tail() shows last n rows (default: 5)
+3. info() provides comprehensive dataset information
+4. Always explore data before analysis
+5. Check for missing values and data types
+6. Use describe() for statistical overview
+7. These methods are essential for data quality assessment
+"""

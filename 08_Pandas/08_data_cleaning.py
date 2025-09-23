@@ -1,118 +1,158 @@
-df.dropna(inplace = True)
-Now, the dropna(inplace = True) will NOT return a new DataFrame, but it will remove all rows containing NULL values from the original DataFrame.
-Replace Empty Values
-Another way of dealing with empty cells is to insert a new value instead.
+"""
+PANDAS DATA CLEANING - STUDY NOTES
+===================================
 
-This way you do not have to delete entire rows just because of some empty cells.
+Author: Study Notes
+Date: September 2025
+Topic: Cleaning Empty Cells and Missing Data
 
-The fillna() method allows us to replace empty cells with a value:
-
-
-
-
-
-Pandas - Cleaning Empty Cells
-Empty Cells
-Empty cells can potentially give you a wrong result when you analyze data.
-
-Remove Rows
-One way to deal with empty cells is to remove rows that contain empty cells.
-
-This is usually OK, since data sets can be very big, and removing a few rows will not have a big impact on the result.
-
-ExampleGet your own Python Server
-Return a new Data Frame with no empty cells:
+OVERVIEW:
+---------
+- Empty cells can give wrong results in data analysis
+- Two main approaches: Remove rows or Replace values
+- dropna() removes rows with missing values
+- fillna() replaces missing values with specified values
+"""
 
 import pandas as pd
+import numpy as np
 
-df = pd.read_csv('data.csv')
+# =============================================================================
+# CREATING SAMPLE DATA WITH MISSING VALUES
+# =============================================================================
 
-new_df = df.dropna()
+print("=== Data Cleaning - Handling Missing Values ===")
 
-print(new_df.to_string())
-Note: By default, the dropna() method returns a new DataFrame, and will not change the original.
+# Create sample data with missing values (NaN)
+sample_data = {
+    'Duration': [60, 60, np.nan, 45, 45, 60, np.nan, 45, 45, 60],
+    'Pulse': [110, 117, 103, np.nan, 117, 102, 110, 104, 109, 98],
+    'Maxpulse': [130, 145, 135, 175, np.nan, 127, 136, 134, 133, 124],
+    'Calories': [409, 479, np.nan, 282, 406, np.nan, 374, 253, 195, 269]
+}
 
-If you want to change the original DataFrame, use the inplace = True argument:
+df = pd.DataFrame(sample_data)
+print("Original DataFrame with missing values:")
+print(df)
 
-Example
-Remove all rows with NULL values:
+# Check missing values
+print(f"\nMissing values per column:")
+print(df.isnull().sum())
 
-import pandas as pd
+# =============================================================================
+# REMOVING ROWS WITH MISSING VALUES
+# =============================================================================
 
-df = pd.read_csv('data.csv')
+print("\n=== Method 1: Remove Rows with Missing Values ===")
 
-df.dropna(inplace = True)
+# Create new DataFrame without missing values (default behavior)
+df_clean = df.dropna()
+print("New DataFrame after removing rows with NaN:")
+print(df_clean)
+print(f"Shape before: {df.shape}, Shape after: {df_clean.shape}")
 
-print(df.to_string())
-Note: Now, the dropna(inplace = True) will NOT return a new DataFrame, but it will remove all rows containing NULL values from the original DataFrame.
+# Remove missing values from original DataFrame (inplace=True)
+print("\n=== Remove from Original DataFrame ===")
+df_copy = df.copy()  # Make a copy to demonstrate inplace
+print("Before inplace removal:")
+print(f"Shape: {df_copy.shape}")
 
-Replace Empty Values
-Another way of dealing with empty cells is to insert a new value instead.
+df_copy.dropna(inplace=True)
+print("\nAfter inplace removal:")
+print(df_copy)
+print(f"Shape: {df_copy.shape}")
 
-This way you do not have to delete entire rows just because of some empty cells.
+# =============================================================================
+# REPLACING MISSING VALUES
+# =============================================================================
 
-The fillna() method allows us to replace empty cells with a value:
+print("\n=== Method 2: Replace Missing Values ===")
 
-Example
-Replace NULL values with the number 130:
+# Replace with a specific value
+df_filled = df.fillna(0)
+print("Replace all NaN with 0:")
+print(df_filled)
 
-import pandas as pd
+# Replace with different values per column
+df_custom_fill = df.copy()
+df_custom_fill['Duration'].fillna(50, inplace=True)     # Replace Duration NaN with 50
+df_custom_fill['Pulse'].fillna(df['Pulse'].mean(), inplace=True)  # Replace with mean
+df_custom_fill['Maxpulse'].fillna(df['Maxpulse'].median(), inplace=True)  # Replace with median
+df_custom_fill['Calories'].fillna(df['Calories'].mean(), inplace=True)  # Replace with mean
 
-df = pd.read_csv('data.csv')
+print("\nCustom replacement (Duration=50, others=mean/median):")
+print(df_custom_fill)
 
-df.fillna(130, inplace = True)
-Replace Only For Specified Columns
-The example above replaces all empty cells in the whole Data Frame.
+# =============================================================================
+# ADVANCED REPLACEMENT STRATEGIES
+# =============================================================================
 
-To only replace empty values for one column, specify the column name for the DataFrame:
+print("\n=== Advanced Replacement Strategies ===")
 
-Example
-Replace NULL values in the "Calories" columns with the number 130:
+# Replace with specific value for specific column
+df_specific = df.copy()
+df_specific.fillna({"Calories": 300}, inplace=True)  # Only replace Calories column
+print("Replace only Calories column with 300:")
+print(df_specific)
 
-import pandas as pd
+# Replace using statistical measures
+print("\n=== Statistical Replacements ===")
+df_stats = df.copy()
 
-df = pd.read_csv('data.csv')
+# Calculate statistics
+duration_mean = df['Duration'].mean()
+pulse_median = df['Pulse'].median() 
+maxpulse_mode = df['Maxpulse'].mode()[0] if not df['Maxpulse'].mode().empty else df['Maxpulse'].mean()
 
-df.fillna({"Calories": 130}, inplace=True)
-REMOVE ADS
+print(f"Duration mean: {duration_mean:.2f}")
+print(f"Pulse median: {pulse_median:.2f}")
+print(f"Maxpulse mode: {maxpulse_mode:.2f}")
 
-Replace Using Mean, Median, or Mode
-A common way to replace empty cells, is to calculate the mean, median or mode value of the column.
+# Apply statistical replacements
+df_stats['Duration'].fillna(duration_mean, inplace=True)
+df_stats['Pulse'].fillna(pulse_median, inplace=True)
+df_stats['Maxpulse'].fillna(maxpulse_mode, inplace=True)
+df_stats['Calories'].fillna(df['Calories'].mean(), inplace=True)
 
-Pandas uses the mean() median() and mode() methods to calculate the respective values for a specified column:
+print("\nDataFrame after statistical replacement:")
+print(df_stats)
 
-Example
-Calculate the MEAN, and replace any empty values with it:
+# =============================================================================
+# FORWARD FILL AND BACKWARD FILL
+# =============================================================================
 
-import pandas as pd
+print("\n=== Forward Fill and Backward Fill ===")
 
-df = pd.read_csv('data.csv')
+# Forward fill (use previous value)
+df_ffill = df.fillna(method='ffill')
+print("Forward fill (use previous value):")
+print(df_ffill)
 
-x = df["Calories"].mean()
+# Backward fill (use next value)
+df_bfill = df.fillna(method='bfill')
+print("\nBackward fill (use next value):")
+print(df_bfill)
 
-df.fillna({"Calories": x}, inplace=True)
-Mean = the average value (the sum of all values divided by number of values).
+# =============================================================================
+# KEY POINTS TO REMEMBER
+# =============================================================================
+"""
+DATA CLEANING STRATEGIES:
 
-Example
-Calculate the MEDIAN, and replace any empty values with it:
+1. REMOVAL METHODS:
+   - dropna() - Remove rows with missing values
+   - Use inplace=True to modify original DataFrame
 
-import pandas as pd
+2. REPLACEMENT METHODS:
+   - fillna(value) - Replace with specific value
+   - fillna(dict) - Replace specific columns
+   - Statistical replacement: mean(), median(), mode()
+   - Forward fill: method='ffill'
+   - Backward fill: method='bfill'
 
-df = pd.read_csv('data.csv')
-
-x = df["Calories"].median()
-
-df.fillna({"Calories": x}, inplace=True)
-Median = the value in the middle, after you have sorted all values ascending.
-
-Example
-Calculate the MODE, and replace any empty values with it:
-
-import pandas as pd
-
-df = pd.read_csv('data.csv')
-
-x = df["Calories"].mode()[0]
-
-df.fillna({"Calories": x}, inplace=True)
-Mode = the value that appears most frequently.
+3. BEST PRACTICES:
+   - Always check missing values first: df.isnull().sum()
+   - Consider the impact of removal vs replacement
+   - Statistical measures often work better than fixed values
+   - Document your cleaning decisions
+"""
