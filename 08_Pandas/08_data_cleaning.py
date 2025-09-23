@@ -1,4 +1,11 @@
 df.dropna(inplace = True)
+Now, the dropna(inplace = True) will NOT return a new DataFrame, but it will remove all rows containing NULL values from the original DataFrame.
+Replace Empty Values
+Another way of dealing with empty cells is to insert a new value instead.
+
+This way you do not have to delete entire rows just because of some empty cells.
+
+The fillna() method allows us to replace empty cells with a value:
 
 
 

@@ -1,13 +1,27 @@
-Pandas - Analyzing DataFrames
-Viewing the Data
-One of the most used method for getting a quick overview of the DataFrame, is the head() method.
+"""
+PANDAS DATA ANALYSIS - HEAD & TAIL - STUDY NOTES
+================================================
 
-The head() method returns the headers and a specified number of rows, starting from the top.
+Author: Study Notes
+Date: September 2025
+Topic: Data Analysis with head() and tail() methods
 
-ExampleGet your own Python Server
-Get a quick overview by printing the first 10 rows of the DataFrame:
+OVERVIEW:
+---------
+- head() and tail() are essential for quick data overview
+- Perfect for exploring large datasets
+- Help understand data structure before analysis
+"""
 
 import pandas as pd
+
+# =============================================================================
+# DATA ANALYSIS METHODS
+# =============================================================================
+
+print("=== Data Analysis with head() and tail() ===")
+
+# Create sample data for demonstration
 
 df = pd.read_csv('data.csv')
 
