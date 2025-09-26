@@ -1,189 +1,248 @@
+"""
+Queue Data Structure Implementation in Python
+
 A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle.
 
-Queues
 Think of a queue as people standing in line in a supermarket.
-
 The first person to stand in line is also the first who can pay and leave the supermarket.
 
 Basic operations we can do on a queue are:
+- Enqueue: Adds a new element to the queue
+- Dequeue: Removes and returns the first (front) element from the queue
+- Peek: Returns the first element in the queue
+- isEmpty: Checks if the queue is empty
+- Size: Finds the number of elements in the queue
 
-Enqueue: Adds a new element to the queue.
-Dequeue: Removes and returns the first (front) element from the queue.
-Peek: Returns the first element in the queue.
-isEmpty: Checks if the queue is empty.
-Size: Finds the number of elements in the queue.
 Queues can be implemented by using arrays or linked lists.
 
-Queues can be used to implement job scheduling for an office printer, order processing for e-tickets, or to create algorithms for breadth-first search in graphs.
+Queues can be used to implement:
+- Job scheduling for an office printer
+- Order processing for e-tickets
+- Algorithms for breadth-first search in graphs
 
-Queues are often mentioned together with Stacks, which is a similar data structure described on the previous page.
+Queues are often mentioned together with Stacks, which is a similar data structure.
+"""
 
-Queue Implementation using Python Lists
-For Python lists (and arrays), a Queue can look and behave like this:
+# ============================================================================
+# Queue Implementation using Python Lists
+# ============================================================================
 
-x = [5, 6, 2, 9, 3, 8, 4, 2]
-Add:  Remove: 
-Since Python lists has good support for functionality needed to implement queues, we start with creating a queue and do queue operations with just a few lines:
+print("=== Queue Implementation using Python Lists ===")
+print("Basic queue operations with Python lists:")
 
-ExampleGet your own Python Server
-Using a Python list as a queue:
-
+# Using a Python list as a queue:
 queue = []
 
-# Enqueue
+# Enqueue operations
 queue.append('A')
 queue.append('B')
 queue.append('C')
-print("Queue: ", queue)
+print("Queue after enqueues: ", queue)
 
-# Peek
-frontElement = queue[0]
-print("Peek: ", frontElement)
+# Peek operation
+front_element = queue[0]
+print("Peek (front element): ", front_element)
 
-# Dequeue
-poppedElement = queue.pop(0)
-print("Dequeue: ", poppedElement)
+# Dequeue operation
+popped_element = queue.pop(0)
+print("Dequeue: ", popped_element)
 
-print("Queue after Dequeue: ", queue)
+print("Queue after dequeue: ", queue)
 
-# isEmpty
-isEmpty = not bool(queue)
-print("isEmpty: ", isEmpty)
+# isEmpty check
+is_empty = not bool(queue)
+print("isEmpty: ", is_empty)
 
-# Size
+# Size operation
 print("Size: ", len(queue))
-Note: While using a list is simple, removing elements from the beginning (dequeue operation) requires shifting all remaining elements, making it less efficient for large queues.
+print()
 
-Implementing a Queue Class
-Here's a complete implementation of a Queue class:
+# Note: While using a list is simple, removing elements from the beginning (dequeue operation) 
+# requires shifting all remaining elements, making it less efficient for large queues.
 
-Example
-Using a Python class as a queue:
+# ============================================================================
+# Queue Class Implementation
+# ============================================================================
+
+print("=== Queue Class Implementation ===")
 
 class Queue:
-  def __init__(self):
-    self.queue = []
+    """A Queue class implementation using Python lists"""
     
-  def enqueue(self, element):
-    self.queue.append(element)
+    def __init__(self):
+        """Initialize an empty queue"""
+        self.queue = []
+    
+    def enqueue(self, element):
+        """Add an element to the rear of the queue"""
+        self.queue.append(element)
+    
+    def dequeue(self):
+        """Remove and return the front element from the queue"""
+        if self.is_empty():
+            return "Queue is empty"
+        return self.queue.pop(0)
+    
+    def peek(self):
+        """Return the front element without removing it"""
+        if self.is_empty():
+            return "Queue is empty"
+        return self.queue[0]
+    
+    def is_empty(self):
+        """Check if the queue is empty"""
+        return len(self.queue) == 0
+    
+    def size(self):
+        """Return the number of elements in the queue"""
+        return len(self.queue)
+    
+    def display(self):
+        """Display the current queue"""
+        return self.queue
 
-  def dequeue(self):
-    if self.isEmpty():
-      return "Queue is empty"
-    return self.queue.pop(0)
 
-  def peek(self):
-    if self.isEmpty():
-      return "Queue is empty"
-    return self.queue[0]
+# Demonstrating Queue class usage
+my_queue = Queue()
 
-  def isEmpty(self):
-    return len(self.queue) == 0
+my_queue.enqueue('A')
+my_queue.enqueue('B')
+my_queue.enqueue('C')
 
-  def size(self):
-    return len(self.queue)
+print("Queue: ", my_queue.display())
+print("Peek: ", my_queue.peek())
+print("Dequeue: ", my_queue.dequeue())
+print("Queue after dequeue: ", my_queue.display())
+print("isEmpty: ", my_queue.is_empty())
+print("Size: ", my_queue.size())
+print()
 
-# Create a queue
-myQueue = Queue()
+# ============================================================================
+# Queue Implementation using Linked Lists
+# ============================================================================
 
-myQueue.enqueue('A')
-myQueue.enqueue('B')
-myQueue.enqueue('C')
-
-print("Queue: ", myQueue.queue)
-print("Peek: ", myQueue.peek())
-print("Dequeue: ", myQueue.dequeue())
-print("Queue after Dequeue: ", myQueue.queue)
-print("isEmpty: ", myQueue.isEmpty())
-print("Size: ", myQueue.size())
-Queue Implementation using Linked Lists
-A linked list consists of nodes with some sort of data, and a pointer to the next node.
-
-A singly linked list.
-A big benefit with using linked lists is that nodes are stored wherever there is free space in memory, the nodes do not have to be stored contiguously right after each other like elements are stored in arrays. Another nice thing with linked lists is that when adding or removing nodes, the rest of the nodes in the list do not have to be shifted.
-
-To better understand the benefits with using arrays or linked lists to implement queues, you should check out this page that explains how arrays and linked lists are stored in memory.
-
-This is how a queue can be implemented using a linked list.
-
-Example
-Creating a Queue using a Linked List:
+print("=== Queue Implementation using Linked Lists ===")
 
 class Node:
-  def __init__(self, data):
-    self.data = data
-    self.next = None
+    """Node class for linked list implementation"""
+    
+    def __init__(self, data):
+        """Initialize a node with data"""
+        self.data = data
+        self.next = None
 
-class Queue:
-  def __init__(self):
-    self.front = None
-    self.rear = None
-    self.length = 0
 
-  def enqueue(self, element):
-    new_node = Node(element)
-    if self.rear is None:
-      self.front = self.rear = new_node
-      self.length += 1
-      return
-    self.rear.next = new_node
-    self.rear = new_node
-    self.length += 1
+class LinkedListQueue:
+    """Queue implementation using linked lists for better efficiency"""
+    
+    def __init__(self):
+        """Initialize an empty queue"""
+        self.front = None
+        self.rear = None
+        self.length = 0
+    
+    def enqueue(self, element):
+        """Add an element to the rear of the queue"""
+        new_node = Node(element)
+        if self.rear is None:
+            self.front = self.rear = new_node
+            self.length += 1
+            return
+        self.rear.next = new_node
+        self.rear = new_node
+        self.length += 1
+    
+    def dequeue(self):
+        """Remove and return the front element from the queue"""
+        if self.is_empty():
+            return "Queue is empty"
+        temp = self.front
+        self.front = temp.next
+        self.length -= 1
+        if self.front is None:
+            self.rear = None
+        return temp.data
+    
+    def peek(self):
+        """Return the front element without removing it"""
+        if self.is_empty():
+            return "Queue is empty"
+        return self.front.data
+    
+    def is_empty(self):
+        """Check if the queue is empty"""
+        return self.length == 0
+    
+    def size(self):
+        """Return the number of elements in the queue"""
+        return self.length
+    
+    def display(self):
+        """Display the queue elements"""
+        elements = []
+        temp = self.front
+        while temp:
+            elements.append(temp.data)
+            temp = temp.next
+        return elements
 
-  def dequeue(self):
-    if self.isEmpty():
-      return "Queue is empty"
-    temp = self.front
-    self.front = temp.next
-    self.length -= 1
-    if self.front is None:
-      self.rear = None
-    return temp.data
 
-  def peek(self):
-    if self.isEmpty():
-      return "Queue is empty"
-    return self.front.data
+# Demonstrating LinkedListQueue usage
+linked_queue = LinkedListQueue()
 
-  def isEmpty(self):
-    return self.length == 0
+linked_queue.enqueue('A')
+linked_queue.enqueue('B')
+linked_queue.enqueue('C')
 
-  def size(self):
-    return self.length
+print("Linked List Queue: ", linked_queue.display())
+print("Peek: ", linked_queue.peek())
+print("Dequeue: ", linked_queue.dequeue())
+print("Queue after dequeue: ", linked_queue.display())
+print("isEmpty: ", linked_queue.is_empty())
+print("Size: ", linked_queue.size())
+print()
 
-  def printQueue(self):
-    temp = self.front
-    while temp:
-      print(temp.data, end=" -> ")
-      temp = temp.next
-    print()
+# ============================================================================
+# Queue Applications and Benefits
+# ============================================================================
 
-# Create a queue
-myQueue = Queue()
+print("=== Queue Applications ===")
+print("""
+Common Queue Applications:
+1. Task scheduling in operating systems
+2. Breadth-first search in graphs
+3. Message queues in distributed systems
+4. Print job scheduling
+5. CPU task scheduling
+6. Handling requests in web servers
 
-myQueue.enqueue('A')
-myQueue.enqueue('B')
-myQueue.enqueue('C')
+Benefits of Linked List Implementation:
+- Dynamic size: The queue can grow and shrink dynamically
+- No shifting: Front element removal doesn't require shifting other elements
+- Memory efficient: Only allocates memory as needed
 
-print("Queue: ", end="")
-myQueue.printQueue()
-print("Peek: ", myQueue.peek())
-print("Dequeue: ", myQueue.dequeue())
-print("Queue after Dequeue: ", end="")
-myQueue.printQueue()
-print("isEmpty: ", myQueue.isEmpty())
-print("Size: ", myQueue.size())
-Reasons for using linked lists to implement queues:
+Drawbacks of Linked List Implementation:
+- Extra memory: Each element needs memory for the next pointer
+- More complex: Code is longer and more complex than array implementation
+""")
 
-Dynamic size: The queue can grow and shrink dynamically, unlike with arrays.
-No shifting: The front element of the queue can be removed (enqueue) without having to shift other elements in the memory.
-Reasons for not using linked lists to implement queues:
+# ============================================================================
+# Performance Comparison
+# ============================================================================
 
-Extra memory: Each queue element must contain the address to the next element (the next linked list node).
-Readability: The code might be harder to read and write for some because it is longer and more complex.
-Common Queue Applications
-Queues are used in many real-world scenarios:
+print("=== Performance Comparison ===")
+print("""
+Array-based Queue (Python List):
+- Enqueue: O(1) - amortized
+- Dequeue: O(n) - requires shifting elements
+- Space: O(n)
 
-Task scheduling in operating systems
-Breadth-first search in graphs
-Message queues in distributed systems
+Linked List-based Queue:
+- Enqueue: O(1)
+- Dequeue: O(1) - no shifting required
+- Space: O(n) + pointer overhead
+""")
+
+if __name__ == "__main__":
+    print("\n=== Queue Implementation Demo Complete ===")
+    print("All queue operations demonstrated successfully!")
