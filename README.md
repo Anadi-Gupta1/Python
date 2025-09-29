@@ -1,4 +1,4 @@
-# 🐍 Python Programming Repository
+# 🐍 Python Learning Notes Repository
 
 <div align="center">
 
@@ -17,37 +17,37 @@
 <!-- Repository Stats -->
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 ![Python Version](https://img.shields.io/badge/Python-3.6+-blue?style=flat-square)
-![Files](https://img.shields.io/badge/Files-50+-orange?style=flat-square)
-![Modules](https://img.shields.io/badge/Modules-10-purple?style=flat-square)
-![Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)
+![Notes](https://img.shields.io/badge/Notes-50+-orange?style=flat-square)
+![Topics](https://img.shields.io/badge/Topics-10-purple?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Learning-success?style=flat-square)
 ![Stars](https://img.shields.io/github/stars/Anadi-Gupta1/Python?style=flat-square)
 
-<h2>🚀 A Comprehensive Python Learning Journey 🚀</h2>
+<h2>� Comprehensive Python Learning Notes Collection �</h2>
 
-**From Basic Concepts to Advanced Data Science**
+**From Fundamentals to Data Science - A Complete Study Guide**
 
 <p>
-🎯 <strong>50+ Programs</strong> | 📚 <strong>10 Modules</strong> | 🔧 <strong>Hands-on Examples</strong> | ⚡ <strong>Ready-to-Run Code</strong>
+📝 <strong>50+ Note Files</strong> | 🎓 <strong>10 Study Topics</strong> | � <strong>Practical Examples</strong> | 🔍 <strong>Easy Reference</strong>
 </p>
 
 </div>
 
 ---
 
-## 📊 Repository Overview
+## 📊 Notes Repository Overview
 
 <table align="center">
 <tr>
 <td align="center">
-<h3>📂 10 Modules</h3>
-<p>Comprehensive coverage from basics to advanced</p>
+<h3>📂 10 Study Sections</h3>
+<p>Organized learning path from basics to advanced</p>
 </td>
 <td align="center">
-<h3>🐍 50+ Programs</h3>
-<p>Real-world examples and applications</p>
+<h3>� 50+ Note Files</h3>
+<p>Detailed explanations with code examples</p>
 </td>
 <td align="center">
-<h3>📚 Complete Docs</h3>
+<h3>📚 Complete Study Guide</h3>
 <p>Detailed documentation and guides</p>
 </td>
 </tr>
@@ -72,29 +72,27 @@
 ## 🗺️ Project Structure
 
 ```
-🐍 Python/
-├── 📚 01_Fundamentals/           # Core Python concepts & syntax
-├── 🧮 02_Mathematical_Programs/  # Mathematical calculations & formulas
-├── 📊 03_Data_Structures/        # Lists, functions, and data manipulation
-├── 🧠 04_Logic_Problems/         # Algorithmic thinking & problem solving
-├── 📁 05_File_Handling/          # File operations & I/O management
-├── 🔢 06_Numpy/                 # NumPy arrays & mathematical operations
-├── 📈 07_Matplotlib/            # Data visualization & plotting
-├── 🐼 08_Pandas/                # Data analysis & manipulation
-├── 🔬 09_SciPy/                 # Scientific computing & advanced mathematics
-├── 🗂️ 10_DSA/                   # Data Structures & Algorithms
-├── 🛠️ delete.py                 # File deletion utility
-├── ✍️ Write.py                  # File writing operations
-├── 🔒 safe_file_operations.py   # Safe file handling utilities
-└── 📖 README.md                 # Project documentation
+🐍 Python Learning Notes/
+├── 📂 00_Miscellaneous_Scripts_and_Notes/  # Utility scripts and experimental code
+├── 📚 01_Python_Fundamentals_Notes/        # Core Python concepts & syntax notes
+├── 🧮 02_Mathematical_Programming_Notes/   # Mathematical calculations & formulas notes
+├── 📊 03_Data_Structures_Notes/            # Lists, functions, and data manipulation notes
+├── 🧠 04_Logic_and_Problem_Solving_Notes/  # Algorithmic thinking & problem solving notes
+├── 📁 05_File_Handling_Notes/              # File operations & I/O management notes
+├── 🔢 06_NumPy_Library_Notes/              # NumPy arrays & mathematical operations notes
+├── 📈 07_Matplotlib_Visualization_Notes/   # Data visualization & plotting notes
+├── 🐼 08_Pandas_Data_Analysis_Notes/       # Data analysis & manipulation notes
+├── 🔬 09_SciPy_Scientific_Computing_Notes/ # Scientific computing & advanced mathematics notes
+├── 🗂️ 10_Data_Structures_and_Algorithms_Notes/  # Data Structures & Algorithms notes
+└── 📖 README.md                           # Complete study guide documentation
 ```
 
 ---
 
-## 🎯 Learning Modules
+## 🎯 Study Sections & Learning Notes
 
-### 📚 01_Fundamentals
-> **Master Python basics with solid foundation**
+### 📚 01_Python_Fundamentals_Notes
+> **Master Python basics with comprehensive notes and examples**
 
 <details>
 <summary><strong>🔽 Click to expand - 15 Programs</strong></summary>
@@ -121,8 +119,8 @@
 
 ---
 
-### 🧮 02_Mathematical_Programs
-> **Solve real-world mathematical problems**
+### 🧮 02_Mathematical_Programming_Notes
+> **Solve real-world mathematical problems with detailed explanations**
 
 <details>
 <summary><strong>🔽 Click to expand - 11 Programs</strong></summary>
@@ -145,8 +143,8 @@
 
 ---
 
-### 📊 03_Data_Structures
-> **Master Python data structures and operations**
+### 📊 03_Data_Structures_Notes
+> **Master Python data structures and operations with comprehensive notes**
 
 <details>
 <summary><strong>🔽 Click to expand - 8 Programs</strong></summary>
