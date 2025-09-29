@@ -1,0 +1,48 @@
+{
+  "company": "TechCorp Solutions",
+  "year": 2024,
+  "quarterly_sales": {
+    "Q1": {
+      "revenue": 125000,
+      "units_sold": 1250,
+      "profit_margin": 0.15
+    },
+    "Q2": {
+      "revenue": 145000,
+      "units_sold": 1450,
+      "profit_margin": 0.18
+    },
+    "Q3": {
+      "revenue": 168000,
+      "units_sold": 1680,
+      "profit_margin": 0.2
+    },
+    "Q4": {
+      "revenue": 192000,
+      "units_sold": 1920,
+      "profit_margin": 0.22
+    }
+  },
+  "top_products": [
+    {
+      "name": "Product A",
+      "sales": 450000,
+      "market_share": 0.35
+    },
+    {
+      "name": "Product B",
+      "sales": 320000,
+      "market_share": 0.25
+    },
+    {
+      "name": "Product C",
+      "sales": 240000,
+      "market_share": 0.2
+    }
+  ],
+  "metadata": {
+    "last_updated": "2024-09-29",
+    "data_source": "Internal ERP System",
+    "currency": "USD"
+  }
+}

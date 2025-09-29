@@ -1,0 +1,6 @@
+employee_id,name,department,salary,hire_date,active
+1001,John Smith,Engineering,75000,2022-01-15,True
+1002,Sarah Johnson,Marketing,65000,2021-03-22,True
+1003,Mike Davis,Engineering,80000,2020-07-10,True
+1004,Lisa Wilson,HR,60000,2023-02-28,True
+1005,Tom Brown,Sales,55000,2021-11-05,False

@@ -1,0 +1,6 @@
+date;temperature;humidity;pressure;wind_speed;condition
+2024-01-01;22.5;65;1013.25;15.2;Sunny
+2024-01-02;20.1;72;1008.90;12.8;Cloudy
+2024-01-03;18.7;85;1005.15;22.4;Rainy
+2024-01-04;25.3;58;1018.75;8.5;Sunny
+2024-01-05;23.8;70;1012.40;18.9;Partly Cloudy

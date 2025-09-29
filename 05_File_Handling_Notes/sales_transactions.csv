@@ -1,0 +1,6 @@
+transaction_id,date,customer_name,product,quantity,unit_price,total
+TXN001,2024-01-15,Acme Corp,Widget A,10,25.5,255.0
+TXN002,2024-01-16,Beta Ltd,Widget B,5,45.0,225.0
+TXN003,2024-01-17,Gamma Inc,Widget A,20,25.5,510.0
+TXN004,2024-01-18,Delta Co,Widget C,8,35.75,286.0
+TXN005,2024-01-19,Acme Corp,Widget B,12,45.0,540.0

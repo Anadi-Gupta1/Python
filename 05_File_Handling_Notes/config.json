@@ -1,0 +1,47 @@
+{
+  "application": {
+    "name": "DataProcessor",
+    "version": "2.1.0",
+    "debug": false,
+    "max_threads": 4
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "name": "production_db",
+    "ssl": true,
+    "timeout": 30
+  },
+  "api_endpoints": [
+    {
+      "name": "users",
+      "url": "/api/v1/users",
+      "methods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "name": "orders",
+      "url": "/api/v1/orders",
+      "methods": [
+        "GET",
+        "POST",
+        "PUT"
+      ]
+    },
+    {
+      "name": "products",
+      "url": "/api/v1/products",
+      "methods": [
+        "GET"
+      ]
+    }
+  ],
+  "logging": {
+    "level": "INFO",
+    "file": "app.log",
+    "max_size": "10MB",
+    "backup_count": 5
+  }
+}
