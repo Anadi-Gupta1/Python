@@ -10,7 +10,9 @@ Discriminant: Δ = b² - 4ac
 
 Author: Python Learning Notes
 Date: September 2025
+Last Updated: October 3, 2025
 Topic: Quadratic Equations, Mathematical Computing, Conditional Logic
+Version: 1.1
 """
 
 import math
